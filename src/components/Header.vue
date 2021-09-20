@@ -1,12 +1,14 @@
 <template>
     <header>
-        <div id="logo">
-            <img src="../assets/img/dc-logo.png" alt="Logo DC">
-        </div>
-        <div class="list">
-            <ul>
-                <li v-for="(link, index) in links" :key="index"><a :class="(link.current) ? 'active' : null" :href="link.url">{{ link.text }}</a></li>
-            </ul>
+        <div class="container">
+            <div id="logo">
+                <img src="../assets/img/dc-logo.png" alt="Logo DC">
+            </div>
+            <div class="list">
+                <ul>
+                    <li v-for="(link, index) in links" :key="index"><a :class="(link.current) ? 'active' : null" :href="link.url">{{ link.text }}</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 </template>
@@ -75,13 +77,15 @@ export default {
 
 <style lang="scss" scoped>
     @import "../style/General";
+    @import "../style/Vars";
 
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 70%;
-        margin: 0 auto;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
 
         ul {
             display: flex;
@@ -96,8 +100,8 @@ export default {
                 
                 &:hover,
                 &.active {
-                    color: #0282F9;
-                    border-bottom: 1px solid #0282F9;
+                    color: $primary;
+                    border-bottom: 1px solid $primary;
                     
                 }
             }
