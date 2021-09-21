@@ -1,5 +1,6 @@
 <template>
     <header>
+        <div class="black-bar"></div>
         <div class="container">
             <div id="logo">
                 <img src="../assets/img/dc-logo.png" alt="Logo DC">
@@ -80,6 +81,11 @@ export default {
     @import "../style/Vars";
 
     header {
+        .black-bar {
+            height: 30px;
+            background-color: #000;
+        }
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -100,7 +106,7 @@ export default {
                 &:hover,
                 &.active {
                     color: $primary;
-                    border-bottom: 1px solid $primary;
+                    border-bottom: 2px solid $primary;
                     
                 }
             }

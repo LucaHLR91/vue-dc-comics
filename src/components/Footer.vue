@@ -76,12 +76,16 @@ export default {
     @import "../style/General";
     @import "../style/Vars";
 
+    footer {
+        background-image: url('../assets/img/footer-bg.jpg');
+    }
+
     .footer-top {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        background-image: url('../assets/img/footer-bg.jpg');
+        
 
         .footer-nav {
             display: flex;
