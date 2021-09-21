@@ -3,15 +3,18 @@
         <div class="main-comics">
             <ComicsCard  v-for="(card, index) in Cards" :key="index" :comic='card' />
         </div>
-        <div class="main-links">
-            <div class="link" v-for="(link, index) in MainLinks" :key="index" >
-                <img :src="link.src" :alt="link.text">
-                <span>{{link.text}}</span>
-            </div>
-        </div>
         <div class="main-button">
             <button>Load More</button>
         </div>
+        <div class="main-links">
+            <div class="container">
+            <div class="link" v-for="(link, index) in MainLinks" :key="index" >
+                <img :src="require(`../${link.src}`)" :alt="link.text">
+                <span>{{link.text}}</span>
+            </div>
+            </div>
+        </div>
+        
     </main>
 </template>
 
@@ -46,28 +49,55 @@ export default {
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
-        }
-
-        .main-links {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: $primary;
+            width: 70%;
+            margin: 0 auto;
+            padding: 40px;          
         }
 
         .main-button {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 15px;
+            padding: 15px 15px;
 
             button {
                 padding: 10px 50px;
                 background-color: $primary;
-                color: white;
+                color: $titles;
                 font-weight: bold;
                 text-transform: uppercase;
                 border: none;
+            }
+        }
+
+        .main-links {
+            padding: 20px;
+            background-color: $primary;
+
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+
+                img {
+                    width: 50%;
+                }
+
+                span {
+                    color: $titles;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-left: 15px;
+                }
+                
             }
         }
     }

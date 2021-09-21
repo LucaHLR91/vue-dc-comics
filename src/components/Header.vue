@@ -90,6 +90,14 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            #logo {
+                padding: 20px;
+            }
+
+            .list {
+                height: 100%;
+            }
         }
 
         ul {
