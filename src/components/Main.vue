@@ -1,7 +1,10 @@
 <template>
     <main>
-        <div class="container">
-            <h1>Content goes here</h1>
+        <div class="main-comics">
+
+        </div>
+        <div class="main-links">
+            
         </div>
     </main>
 </template>
