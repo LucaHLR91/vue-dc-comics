@@ -92,6 +92,9 @@ export default {
         .footer-nav {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0;
+            margin-right: 10px;
             
 
             .footer-nav-title {
@@ -99,9 +102,16 @@ export default {
                 text-transform: uppercase;
             }
 
-            .footer-nav ul li a {
+            li {
+                text-align: start;
                 font-size: 10px;
-                color: #537895;
+                font-weight: bold;
+                padding: 5px 0;
+                
+
+                a {
+                    color: grey;
+                }
             }
         }
     }
