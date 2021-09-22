@@ -128,7 +128,7 @@ export default {
     }
 
     .sign-up-btn {
-        padding: 20px;
+        padding: 20px 0;
 
         button {
             color: white;
@@ -159,6 +159,7 @@ export default {
 
         li {
             padding: 10px 10px;
+            cursor: pointer;
         }
     }
 </style>

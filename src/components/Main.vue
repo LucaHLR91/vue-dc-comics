@@ -67,6 +67,7 @@ export default {
                 font-weight: bold;
                 text-transform: uppercase;
                 border: none;
+                cursor: pointer;
             }
         }
 
