@@ -86,6 +86,7 @@ export default {
                 align-items: center;
                 width: 100px;
                 height: 100px;
+                cursor: pointer;
 
                 img {
                     width: 50%;
